@@ -1,0 +1,7 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    background-color: lightsteelblue;
+    margin: 0; /* gets rid of the white border around flex-container */
+}

@@ -12,6 +12,7 @@ function getComputerChoice() {
 
 let playerScore = 0;
 let computerScore = 0;
+let roundWinner = '';
 
 //Function that plays a single round of Rock Paper Scissors
 function playRound(playerSelection, computerSelection) {
@@ -21,29 +22,38 @@ function playRound(playerSelection, computerSelection) {
 
     //player wins
     if (playerSelection == 'rock' && computerSelection == 'scissor') {
-        playerScore++;
+        roundWinner = 'player';
         return "Player wins! Rock beats Scissors";
     } else if (playerSelection == 'paper' && computerSelection == 'rock') {
-        playerScore++;
+        roundWinner = 'player';
         return "Player wins! Paper beats Rock";
     } else if (playerSelection == 'scissor' && computerSelection == 'paper') {
-        playerScore++;
+        roundWinner = 'player';
         return "Player wins! Scissors beats Paper";
 
     //computer wins
     } else if (playerSelection == 'scissor' && computerSelection == 'rock') {
-        computerScore++;
+        roundWinner = 'computer';
         return "You lose! Rock beats Scissors";
     } else if (playerSelection == 'rock' && computerSelection == 'paper') {
-        computerScore++;
+        roundWinner = 'computer';
         return "You lose! Paper beats Rock";
     } else if (playerSelection == 'paper' && computerSelection == 'scissor') {
-        computerScore++;
+        roundWinner = 'computer';
         return "You lose! Scissors beats Paper";
 
     //tie
     } else {
+        roundWinner = 'tie';
         return "It's a tie!";
+    }
+}
+
+function updateScore () {
+    if (roundWinner == 'player') {
+        playerScore++;
+    } else if (roundWinner == 'computer') {
+        computerScore++;
     }
 }
 
@@ -53,7 +63,13 @@ function game () {
         const playerSelection = answer;
         const computerSelection = getComputerChoice();
         console.log(playRound(playerSelection, computerSelection));
+        updateScore();
     }
+
+    //Printing Ouput
+    console.log("Final Score:");
+    console.log("Player Score: ", playerScore);
+    console.log("Computer Score: ", computerScore);
 }
 
 game ();
