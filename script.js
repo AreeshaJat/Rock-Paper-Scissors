@@ -13,6 +13,7 @@ function getComputerChoice() {
 let playerScore = 0;
 let computerScore = 0;
 
+//Function that plays a single round of Rock Paper Scissors
 function playRound(playerSelection, computerSelection) {
 
     //Case sensitive
@@ -46,16 +47,13 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-let answer = prompt("Enter either 'rock', 'paper' or 'scissor': ");
-
 function game () {
-    playRound();
-    playRound();
-    playRound();
-    playRound();
-    playRound();
+    for (let i = 1; i<= 5; i++ ) {
+        let answer = prompt("Enter either 'rock', 'paper' or 'scissor': ");
+        const playerSelection = answer;
+        const computerSelection = getComputerChoice();
+        console.log(playRound(playerSelection, computerSelection));
+    }
 }
 
-const playerSelection = answer;
-const computerSelection = getComputerChoice();
-console.log(playRound(playerSelection, computerSelection));
+game ();
