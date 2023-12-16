@@ -82,14 +82,14 @@ function endGame() {
     //when either the player or computer reach a score of 5
     if (computerScore == 5 || playerScore == 5) {
         if (computerScore == 5) {
-            message = "Game Over, You lost the game. Reload the page to play again";
+            message = "Game Over, You lost the game. Reload the page to play again!";
 
             //disabling the buttons after a score of 5 is reached
             document.getElementById("rock").disabled = true;
             document.getElementById("paper").disabled = true;
             document.getElementById("scissor").disabled = true;
         } else if (playerScore == 5) {
-            message = "Game Over, You won the game. Reload the page to play again";
+            message = "Game Over, You won the game. Reload the page to play again!";
 
             //disabling the buttons after a score of 5 is reached
             document.getElementById("rock").disabled = true;

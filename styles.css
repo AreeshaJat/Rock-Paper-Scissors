@@ -10,5 +10,64 @@ body {
     font-weight: bolder;
     font-size: 48px;
     text-align: center;
-    padding-top: 40px;
+    padding: 40px;
+}
+
+.option {
+    font-weight: bold;
+    font-size: 32px;
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+.buttons #rock {
+    height: 250px;
+    width: 250px;
+    background-image: url(./images/rock.jpeg);
+    background-size: 250px;
+    background-repeat: no-repeat;
+    margin: 20px;
+    border-radius: 25px;
+}
+
+.buttons #paper {
+    height: 250px;
+    width: 250px;
+    background-image: url(./images/paper.jpeg);
+    background-size: 250px;
+    background-repeat: no-repeat;
+    margin: 20px;
+    border-radius: 25px;
+}
+
+.buttons #scissor {
+    height: 250px;
+    width: 250px;
+    background-image: url(./images/scissor.jpeg);
+    background-size: 250px;
+    background-repeat: no-repeat;
+    margin: 20px;
+    border-radius: 25px;
+}
+
+#winner {
+    text-align: center;
+    font-size: 30px;
+}
+
+#resultOutput {
+    text-align: center;
+    font-size: 30px;
+}
+
+#finalOutput {
+    text-align: center;
+    font-size: 30px;
 }
