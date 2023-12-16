@@ -18,7 +18,7 @@ let roundWinner = '';
 function playRound(playerSelection, computerSelection) {
 
     //Case sensitive
-    const response = playerSelection.charAt(0).toUpperCase() + playerSelection.slice(1).toLowerCase();
+    const response = playerSelection.toLowerCase();
 
     //player wins
     if (playerSelection == 'rock' && computerSelection == 'scissor') {
@@ -73,6 +73,34 @@ function game (playerSelection) {
 
     //storing the player and computer score in textContent property
     finalOutput.textContent = `Player Score: ${playerScore}, Computer Score: ${computerScore}`;
+
+    endGame();
+}
+
+function endGame() {
+    let message = "";
+    //when either the player or computer reach a score of 5
+    if (computerScore == 5 || playerScore == 5) {
+        if (computerScore == 5) {
+            message = "Game Over, You lost the game. Reload the page to play again";
+
+            //disabling the buttons after a score of 5 is reached
+            document.getElementById("rock").disabled = true;
+            document.getElementById("paper").disabled = true;
+            document.getElementById("scissor").disabled = true;
+        } else if (playerScore == 5) {
+            message = "Game Over, You won the game. Reload the page to play again";
+
+            //disabling the buttons after a score of 5 is reached
+            document.getElementById("rock").disabled = true;
+            document.getElementById("rock").disabled = true;
+            document.getElementById("paper").disabled = true;
+            document.getElementById("scissor").disabled = true;
+        }
+    }
+
+    //Printing the message depending on who wins
+    document.getElementById('winner').innerHTML = message;
 }
 
 game (); 

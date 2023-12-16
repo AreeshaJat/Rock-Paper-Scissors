@@ -11,12 +11,13 @@
 
     <!--there are three buttons rock paper and scissor, when we click them the button calls game function and passes the argument rock
     paper or scissor based on what the user selects-->
-    <button onclick="game('rock')">rock</button>
-    <button onclick="game('paper')">paper</button>
-    <button onclick="game('scissor')">scissor</button>
+    <button id="rock" onclick="game('rock')">rock</button>
+    <button id="paper" onclick="game('paper')">paper</button>
+    <button id="scissor" onclick="game('scissor')">scissor</button>
 
     <p id="resultOutput">Game Result</p>
     <p id="finalOutput">Final Score</p>
+    <div class="classWinner" id="winner"></div>
 
     <script src="script.js"></script>
 </body>
