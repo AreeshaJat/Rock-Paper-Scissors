@@ -93,7 +93,6 @@ function endGame() {
 
             //disabling the buttons after a score of 5 is reached
             document.getElementById("rock").disabled = true;
-            document.getElementById("rock").disabled = true;
             document.getElementById("paper").disabled = true;
             document.getElementById("scissor").disabled = true;
         }
