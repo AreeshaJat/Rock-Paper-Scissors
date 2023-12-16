@@ -62,10 +62,16 @@ function game (playerSelection) {
     const result = playRound(playerSelection, computerSelection);
     updateScore();
 
+    //setting id attribute 'resultOutput' to resultOutput variable
     const resultOutput = document.getElementById('resultOutput');
+
+    //storing the result in textContent property
     resultOutput.textContent = result;
 
+    //setting id attribute 'finalOutput' to finalOutput variable
     const finalOutput = document.getElementById('finalOutput');
+
+    //storing the player and computer score in textContent property
     finalOutput.textContent = `Player Score: ${playerScore}, Computer Score: ${computerScore}`;
 }
 
