@@ -57,19 +57,16 @@ function updateScore () {
     }
 }
 
-function game () {
-    for (let i = 1; i<= 5; i++ ) {
-        let answer = prompt("Enter either 'rock', 'paper' or 'scissor': ");
-        const playerSelection = answer;
-        const computerSelection = getComputerChoice();
-        console.log(playRound(playerSelection, computerSelection));
-        updateScore();
-    }
+function game (playerSelection) {
+    const computerSelection = getComputerChoice();
+    const result = playRound(playerSelection, computerSelection);
+    updateScore();
 
-    //Printing Ouput
-    console.log("Final Score:");
-    console.log("Player Score: ", playerScore);
-    console.log("Computer Score: ", computerScore);
+    const resultOutput = document.getElementById('resultOutput');
+    resultOutput.textContent = result;
+
+    const finalOutput = document.getElementById('finalOutput');
+    finalOutput.textContent = `Player Score: ${playerScore}, Computer Score: ${computerScore}`;
 }
 
-game ();
+game (); 

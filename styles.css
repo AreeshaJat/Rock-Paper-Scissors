@@ -5,3 +5,10 @@ body {
     background-color: lightsteelblue;
     margin: 0; /* gets rid of the white border around flex-container */
 }
+
+.title {
+    font-weight: bolder;
+    font-size: 48px;
+    text-align: center;
+    padding-top: 40px;
+}
