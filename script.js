@@ -16,8 +16,6 @@ let roundWinner = '';
 
 //Function that plays a single round of Rock Paper Scissors
 function playRound(playerSelection, computerSelection) {
-    //Case sensitive
-    //const response = playerSelection.toLowerCase();
 
     //player wins
     if (playerSelection == 'rock' && computerSelection == 'scissor') {
