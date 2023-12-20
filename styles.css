@@ -2,7 +2,10 @@ body {
     font-family: 'Roboto', sans-serif;
     display: flex;
     flex-direction: column;
-    background-color: lightsteelblue;
+    background-color: #FEBEB0;
+    justify-content: center;
+    align-items: center;
+    /*background-color: lightsteelblue;*/
     margin: 0; /* gets rid of the white border around flex-container */
 }
 
@@ -25,9 +28,10 @@ body {
     justify-content: center;
     align-items: center;
     gap: 16px;
+    padding-bottom: 50px;
 }
 
-.buttons #rock {
+.buttons #rockButton {
     height: 250px;
     width: 250px;
     background-image: url(./images/rock.jpeg);
@@ -37,7 +41,7 @@ body {
     border-radius: 25px;
 }
 
-.buttons #paper {
+.buttons #paperButton {
     height: 250px;
     width: 250px;
     background-image: url(./images/paper.jpeg);
@@ -47,7 +51,7 @@ body {
     border-radius: 25px;
 }
 
-.buttons #scissor {
+.buttons #scissorButton {
     height: 250px;
     width: 250px;
     background-image: url(./images/scissor.jpeg);
@@ -57,17 +61,13 @@ body {
     border-radius: 25px;
 }
 
-#winner {
+.scoreBoard {
     text-align: center;
     font-size: 30px;
-}
-
-#resultOutput {
-    text-align: center;
-    font-size: 30px;
-}
-
-#finalOutput {
-    text-align: center;
-    font-size: 30px;
+    background-color: #e69597;
+    /*background-color: lightsteelblue;*/
+    color: #1F2937;
+    width: 900px;
+    justify-content: center;
+    align-items: center;
 }

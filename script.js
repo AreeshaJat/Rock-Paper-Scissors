@@ -16,31 +16,30 @@ let roundWinner = '';
 
 //Function that plays a single round of Rock Paper Scissors
 function playRound(playerSelection, computerSelection) {
-
     //Case sensitive
-    const response = playerSelection.toLowerCase();
+    //const response = playerSelection.toLowerCase();
 
     //player wins
     if (playerSelection == 'rock' && computerSelection == 'scissor') {
         roundWinner = 'player';
-        return "Player wins! Rock beats Scissors";
+        return "Player wins 🎊 Rock beats Scissors";
     } else if (playerSelection == 'paper' && computerSelection == 'rock') {
         roundWinner = 'player';
-        return "Player wins! Paper beats Rock";
+        return "Player wins 🎊 Paper beats Rock";
     } else if (playerSelection == 'scissor' && computerSelection == 'paper') {
         roundWinner = 'player';
-        return "Player wins! Scissors beats Paper";
+        return "Player wins 🎊 Scissors beats Paper";
 
     //computer wins
     } else if (playerSelection == 'scissor' && computerSelection == 'rock') {
         roundWinner = 'computer';
-        return "You lose! Rock beats Scissors";
+        return "You lose 🥺 Rock beats Scissors";
     } else if (playerSelection == 'rock' && computerSelection == 'paper') {
         roundWinner = 'computer';
-        return "You lose! Paper beats Rock";
+        return "You lose 🥺 Paper beats Rock";
     } else if (playerSelection == 'paper' && computerSelection == 'scissor') {
         roundWinner = 'computer';
-        return "You lose! Scissors beats Paper";
+        return "You lose 🥺 Scissors beats Paper";
 
     //tie
     } else {
@@ -56,6 +55,19 @@ function updateScore () {
         computerScore++;
     }
 }
+
+const rockButton = document.getElementById('rockButton');
+const paperButton = document.getElementById('paperButton');
+const scissorButton = document.getElementById('scissorButton');
+rockButton.addEventListener("click", function() {
+    game('rock');
+});
+paperButton.addEventListener("click", function() {
+    game('paper');
+})
+scissorButton.addEventListener("click", function() {
+    game('scissor');
+})
 
 function game (playerSelection) {
     const computerSelection = getComputerChoice();
@@ -82,19 +94,19 @@ function endGame() {
     //when either the player or computer reach a score of 5
     if (computerScore == 5 || playerScore == 5) {
         if (computerScore == 5) {
-            message = "Game Over, You lost the game. Reload the page to play again!";
+            message = "Game Over, You lost the game 😢 Reload the page to play again!";
 
             //disabling the buttons after a score of 5 is reached
-            document.getElementById("rock").disabled = true;
-            document.getElementById("paper").disabled = true;
-            document.getElementById("scissor").disabled = true;
+            document.getElementById("rockButton").disabled = true;
+            document.getElementById("paperButton").disabled = true;
+            document.getElementById("scissorButton").disabled = true;
         } else if (playerScore == 5) {
-            message = "Game Over, You won the game. Reload the page to play again!";
+            message = "Game Over, You won the game 🥳 Reload the page to play again!";
 
             //disabling the buttons after a score of 5 is reached
-            document.getElementById("rock").disabled = true;
-            document.getElementById("paper").disabled = true;
-            document.getElementById("scissor").disabled = true;
+            document.getElementById("rockButton").disabled = true;
+            document.getElementById("paperButton").disabled = true;
+            document.getElementById("scissorButton").disabled = true;
         }
     }
 
