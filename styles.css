@@ -2,11 +2,9 @@ body {
     font-family: 'Roboto', sans-serif;
     display: flex;
     flex-direction: column;
-    background-color: #FEBEB0;
-    justify-content: center;
-    align-items: center;
-    /*background-color: lightsteelblue;*/
     margin: 0; /* gets rid of the white border around flex-container */
+    background-color: #FEBEB0;
+    display: flex;
 }
 
 .title {
@@ -63,11 +61,10 @@ body {
 
 .scoreBoard {
     text-align: center;
-    font-size: 30px;
+    font-size: 2em; 
     background-color: #e69597;
-    /*background-color: lightsteelblue;*/
     color: #1F2937;
-    width: 900px;
-    justify-content: center;
-    align-items: center;
+    max-width: 100%;
+    margin: 2em;
+    padding: 1em;
 }
