@@ -111,5 +111,3 @@ function endGame() {
     //Printing the message depending on who wins
     document.getElementById('winner').innerHTML = message;
 }
-
-game (); 
