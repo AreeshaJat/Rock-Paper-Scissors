@@ -4,7 +4,6 @@ body {
     flex-direction: column;
     margin: 0; /* gets rid of the white border around flex-container */
     background-color: #FEBEB0;
-    display: flex;
 }
 
 .title {
